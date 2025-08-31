@@ -49,7 +49,7 @@ width: 200px; height: 50px; padding: 20px; font-size: 19px;margin-left: -50px; f
   top: 0;
   left: -260px; /* hidden by default */
   width: 200px;
-  height: 95%;
+  height: 100%;
   background: #1e1e2f;
   color: #fff;
   display: flex;

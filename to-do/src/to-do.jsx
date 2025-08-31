@@ -24,6 +24,7 @@ export default function TodoApp() {
   const [showForm, setShowForm] = useState(() => readJSON("showForm", false));
   const [title, setTitle] = useState(() => localStorage.getItem("draftTitle") || "");
   const [task, setTask] = useState(() => localStorage.getItem("draftTask") || "");
+    const [date, setDate] = useState(() => localStorage.getItem("draftDate") || "");
 
   // 🔄 Persist to localStorage
   useEffect(() => {
@@ -42,6 +43,10 @@ export default function TodoApp() {
     localStorage.setItem("draftTask", task);
   }, [task]);
 
+    useEffect(() => {
+    localStorage.setItem("draftDate", date);
+  }, [date]);
+
   // ✅ Add new todo
   const handleAdd = (e) => {
     e.preventDefault();
@@ -51,12 +56,14 @@ export default function TodoApp() {
       id: Date.now(),
       title: title.trim(),
       task: task.trim(),
+      date: date.trim(),
       completed: false,
     };
 
     setTodos((prev) => [newTodo, ...prev]);
     setTitle("");
     setTask("");
+    setDate("")
     setShowForm(false);
 
     // ✅ Show modal
@@ -85,6 +92,7 @@ export default function TodoApp() {
     if (!item) return;
     setTitle(item.title);
     setTask(item.task);
+    setDate(item.Date);
     setTodos((prev) => prev.filter((t) => t.id !== id));
     setShowForm(true);
   };
@@ -112,7 +120,13 @@ export default function TodoApp() {
 
       <div className="inputField">
         {showForm ? (
+          
           <form onSubmit={handleAdd} className="todo-form">
+            <input type="date"
+               value={date} 
+               className="date"
+               onChange={(e) => setDate(e.target.value)} 
+                />
             <input
               type="text"
               placeholder="Title... "
@@ -121,7 +135,7 @@ export default function TodoApp() {
               className="title-input"
             />
             <textarea
-              placeholder="Enter task details..."
+              placeholder="Start typing..."
               maxRows={12}
               rows={10}
               value={task}
@@ -152,6 +166,7 @@ export default function TodoApp() {
                 .filter((t) => !t.completed)
                 .map((t) => (
                   <li key={t.id}>
+                    <strong className="da"> {t.date}</strong>
                     <strong className="tittle">{t.title}</strong>
                     <p className="de">{t.task}</p>
                     <div className="card-actions">
