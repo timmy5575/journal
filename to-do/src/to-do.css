@@ -129,8 +129,7 @@ form {
 .list li {
   list-style: none;
   box-shadow: 0 6px 15px black;
-  background-color: transparent;
-  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.254);
   border-radius: 12px;
   padding: 12px;
   font-weight: 800;
