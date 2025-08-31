@@ -1,0 +1,123 @@
+/* header{overflow-y: auto;
+    height: 100%; color: white; display: flex;flex-direction: column; justify-content: space-between; position: fixed;
+    width: 20%; background-color: rgb(7, 0, 24); align-items: center;box-shadow: 0 4px 15px 0px black; left: 0;
+}
+.logo{
+    font-size: 20px; font-weight: 1000;
+}
+.nav{width: 200px; display: grid; place-content: center; letter-spacing: 5px; height: 500px; margin-top: -100px;
+}.nav ul li{ margin-bottom: 20px; font-size: 20px; font-weight: 900;
+    list-style: none; 
+}
+.nav ul li:hover{
+    text-decoration: underline;
+}
+.last{
+width: 200px; height: 50px; padding: 20px; font-size: 19px;margin-left: -50px; font-weight: 500;
+}.last ul li{ 
+    list-style: none;  cursor: pointer;
+}.last ul li:hover{
+    text-decoration: underline;
+} */
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+} */
+
+
+
+
+/* nav.css */
+
+/* Layout wrapper */
+.layout {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px; /* hidden by default */
+  width: 200px;
+  height: 95%;
+  background: #1e1e2f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1;
+  
+}
+
+/* Open state */
+.sidebar.open {
+  left: 0;
+}
+
+/* Logo */
+.sidebar .logo h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  text-align: center;
+  color: #ffce00;
+}
+
+/* Nav links */
+.sidebar .nav ul,
+.sidebar .last ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .nav ul li,
+.sidebar .last ul li {
+  padding: 12px 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s ease-in-out;
+}
+
+.sidebar .nav ul li:hover,
+.sidebar .last ul li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Toggle button */
+.nav-toggle {
+  position: fixed;
+  top: 50px;
+  left: 15px;
+  background: #1e1e2f;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1100;
+  transition: background 0.2s ease-in-out;
+}
+
+.nav-toggle:hover {
+  background: #33334d;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 220px;
+  }
+}
