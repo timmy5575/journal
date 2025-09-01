@@ -170,11 +170,11 @@ export default function TodoApp() {
                     <strong className="tittle">{t.title}</strong>
                     <p className="de">{t.task}</p>
                     <div className="card-actions">
-                      <input
+                      {/* <input
                         type="checkbox"
                         checked={t.completed}
                         onChange={() => handleToggleCompleted(t.id)}
-                      />
+                      /> */}
                       <button onClick={() => handleEdit(t.id)}>Edit</button>
                       <button onClick={() => handleDelete(t.id)}>Delete</button>
                     </div>
