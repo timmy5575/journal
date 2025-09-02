@@ -12,7 +12,7 @@ const Nav = () => {
           className="nav-toggle" 
           onClick={() => setShowNav(!showNav)}
         >
-          {showNav ? "✖ Close" : "☰ Menu"}
+          {showNav ? "✖ " : "☰ "}
         </button>
 
         <header className={`sidebar ${showNav ? "open" : ""}`}>

@@ -120,4 +120,8 @@ width: 200px; height: 50px; padding: 20px; font-size: 19px;margin-left: -50px; f
   .sidebar {
     width: 220px;
   }
+  .nav-toggle {
+  position: fixed; width: 50px;
+  top: 50px;
+  left: 0px;}
 }
