@@ -29,15 +29,15 @@ const Nav = () => {
               home </NavLink>
               </li>
               <li>  
-                <NavLink to="/Weather" className={({ isActive }) => (isActive ? "active" : "")}>
+                <NavLink to="/weather" className={({ isActive }) => (isActive ? "active" : "")}>
               Weather </NavLink></li>
               <li>
-                <NavLink to="/Goals" className={({ isActive }) => (isActive ? "active" : "nav-link")}>
+                <NavLink to="/goals" className={({ isActive }) => (isActive ? "active" : "nav-link")}>
                   Goals
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/Calendar" className={({ isActive }) => (isActive ? "active" : "nav-link")}>
+                <NavLink to="/calendar" className={({ isActive }) => (isActive ? "active" : "nav-link")}>
                   Calendar
                 </NavLink>
               </li>

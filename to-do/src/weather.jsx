@@ -1,4 +1,4 @@
-// Weather.jsx
+
 import React, { useState, useEffect } from "react";
 import "./weather.css";
 

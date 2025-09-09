@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import {  Routes, Route } from "react-router-dom";
 
 
-import Todo from "./to-do";
+import Todo from "./to-do.jsx";
 import Nav from "./nav.jsx";
-import Hero from "./greetings";
+import Hero from "./greetings.jsx";
 import "./App.css";
-import Weather from "./weather";
+import Weather from "./weather.jsx";
 
 function App() {
   const [load, setLoad] = useState(true);
@@ -49,9 +49,10 @@ function App() {
         />
        
 
-        <Route path="/Weather" element={<Weather />} />
+        <Route path="/weather" element={<Weather />} />
+        <Route path="/goals" element={<h2>Goals page coming soon...</h2>} />
+<Route path="/calendar" element={<h2>Calendar page coming soon...</h2>} />
       </Routes>
-    
     </>
   );
 }
