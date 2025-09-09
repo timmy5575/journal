@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
+import { NavLink } from "react-router-dom";
 import './nav.css'
 
 const Nav = () => {
   const [showNav, setShowNav] = useState(false); // ✅ put it inside
+  
 
   return (
     <>
@@ -22,18 +24,21 @@ const Nav = () => {
 
           <div className='nav'> 
             <ul>
-              <li>dashboard</li>
-              <li>task</li>
-              <li>goals</li>
-              <li>time</li>
-              <li>calendar</li>
+              <li>
+               <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+              home </NavLink>
+              </li>
+              <li>  
+                <NavLink to="/Weather" className={({ isActive }) => (isActive ? "active" : "")}>
+              Weather </NavLink></li>
+              <li> <a href="#" className="nav-link">Goals</a></li>
+              <li> <a href="#" className="nav-link">Calendar</a></li>
             </ul>
           </div>
 
           <div className='last'>
             <ul>
               <li>settings</li>
-              <li>logout</li>
             </ul>
           </div>
         </header>

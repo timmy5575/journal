@@ -37,11 +37,7 @@ width: 200px; height: 50px; padding: 20px; font-size: 19px;margin-left: -50px; f
 /* nav.css */
 
 /* Layout wrapper */
-.layout {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-}
+
 
 
 .sidebar {
@@ -113,6 +109,27 @@ width: 200px; height: 50px; padding: 20px; font-size: 19px;margin-left: -50px; f
 
 .nav-toggle:hover {
   background: #33334d;
+}
+.nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* hover effect */
+.nav a:hover {
+  background: #f1f5f9;
+  color: #2563eb; /* blue */
+}
+
+/* ✅ active link */
+.nav a.active {
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
 }
 
 /* Responsive behavior */

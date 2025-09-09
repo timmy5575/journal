@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
-// import RingLoader from "react-spinners/RingLoader";
+import {  Routes, Route } from "react-router-dom";
+
 
 import Todo from "./to-do";
 import Nav from "./nav.jsx";
 import Hero from "./greetings";
 import "./App.css";
+import Weather from "./weather";
 
 function App() {
   const [load, setLoad] = useState(true);
@@ -26,24 +28,30 @@ function App() {
   <div className="slider" style={{ "--i": 4 }}></div>
 </section>
 
-
-
-
-      // <main className="loading-page">
-      //   <RingLoader color="#d736c7ff" size={150} speedMultiplier={1.5}  />
-      // </main>
     );
   }
 
   return (
     <>
       <Nav />
-      <section className="s1">
-        <div className="hero">
-          <Hero />
-        </div>
-        <Todo />
-      </section>
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <section className="s1">
+              <div className="hero">
+                <Hero />
+              </div>
+              <Todo />
+            </section>
+          }
+        />
+       
+
+        <Route path="/Weather" element={<Weather />} />
+      </Routes>
+    
     </>
   );
 }
