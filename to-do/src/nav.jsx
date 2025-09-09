@@ -31,8 +31,16 @@ const Nav = () => {
               <li>  
                 <NavLink to="/Weather" className={({ isActive }) => (isActive ? "active" : "")}>
               Weather </NavLink></li>
-              <li> <a href="#" className="nav-link">Goals</a></li>
-              <li> <a href="#" className="nav-link">Calendar</a></li>
+              <li>
+                <NavLink to="/Goals" className={({ isActive }) => (isActive ? "active" : "nav-link")}>
+                  Goals
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/Calendar" className={({ isActive }) => (isActive ? "active" : "nav-link")}>
+                  Calendar
+                </NavLink>
+              </li>
             </ul>
           </div>
 

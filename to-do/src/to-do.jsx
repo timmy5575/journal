@@ -148,7 +148,7 @@ export default function TodoApp() {
         ) : (
 <div className="container">
   
-  <a href="#" class="button type--C">
+  <a href="#" className="button type--C">
     <div className="button__line"></div>
     <div className="button__line"></div>
     <span onClick={() => setShowForm(true)} className="button__text">ENTRY</span>
